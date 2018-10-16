@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var testTF: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        testTF.text = " "
+        let con = testTF.text?.isEmpty
+        print("con = \(con)😄")
+        let newCon = testTF.text?.trimmingCharacters(in: .whitespaces)
+        print("newCon = \(newCon?.isEmpty)😄")
     }
 
 
